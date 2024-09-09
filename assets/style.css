@@ -7,19 +7,13 @@
 
 body {
   font-family: 'Arial', sans-serif;
-  background: repeating-linear-gradient(
-    45deg,
-    #6a0dad, /* Roxo */
-    #6a0dad 10px,
-    #000 10px,
-    #000 20px
-  );
+  background: linear-gradient(135deg, #6a0dad, #000); /* Degradê roxo para preto */
   color: #fff;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
-  overflow: hidden; /* Impede rolagem causada pela grade */
+  overflow: hidden; /* Impede rolagem */
   position: relative; /* Para posicionar o conteúdo */
 }
 
