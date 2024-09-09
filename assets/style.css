@@ -1,56 +1,72 @@
 /* assets/style.css */
 
+/* Aplicando um fundo degradê no corpo */
 body {
   font-family: Arial, sans-serif;
-  background-color: #f0f0f0;
+  background: linear-gradient(to bottom, #003366, #00ccff);
   margin: 0;
   padding: 0;
+  height: 100vh; /* Preencher toda a altura da tela */
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .container {
-  max-width: 600px;
-  margin: 0 auto;
+  max-width: 500px;
+  margin: auto;
   text-align: center;
   padding: 20px;
+  background-color: rgba(255, 255, 255, 0.1); /* Fundo transparente */
+  border-radius: 15px; /* Bordas arredondadas */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra suave */
 }
 
+/* Estilizando o cabeçalho */
 header {
   margin-bottom: 20px;
 }
 
 h1 {
   font-size: 2.5em;
-  color: #333;
+  color: #fff;
+  margin-bottom: 10px;
 }
 
 p {
-  color: #555;
+  color: #eee;
+  font-size: 1.2em;
 }
 
+/* Estilo dos botões */
 .button-container {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 15px; /* Espaçamento entre os botões */
   align-items: center;
 }
 
 .button {
   text-decoration: none;
   padding: 15px 30px;
-  background-color: #007bff;
+  background-color: rgba(255, 255, 255, 0.2);
   color: white;
   font-size: 1.2em;
-  border-radius: 5px;
-  transition: background-color 0.3s ease;
-  width: 80%;
-  text-align: center;
+  border: 2px solid white;
+  border-radius: 25px; /* Borda arredondada */
+  width: 100%; /* Preencher toda a largura do container */
+  max-width: 400px; /* Limitar a largura dos botões */
+  transition: all 0.3s ease;
 }
 
 .button:hover {
-  background-color: #0056b3;
+  background-color: rgba(255, 255, 255, 0.3); /* Efeito hover com mais destaque */
+  color: white;
+  transform: translateY(-2px); /* Efeito de levantar o botão ao passar o mouse */
 }
 
 footer {
   margin-top: 20px;
-  color: #777;
+  color: #ccc;
+  font-size: 0.9em;
 }
