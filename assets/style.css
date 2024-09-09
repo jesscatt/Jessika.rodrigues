@@ -7,15 +7,44 @@
 
 body {
   font-family: 'Arial', sans-serif;
-  background: linear-gradient(to bottom, #001f3f, #007bff);
+  background: #6a0dad; /* Cor de fundo roxa */
+  color: #fff;
+  overflow: hidden; /* Impede rolagem causada pelos brilhinhos */
+  position: relative; /* Para posicionar brilhinhos absolutamente */
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
-  color: #fff;
+}
+
+/* Brilhinhos */
+body::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.3) 10%, transparent 10%),
+              radial-gradient(circle, rgba(255, 255, 255, 0.3) 10%, transparent 10%);
+  background-size: 15px 15px, 30px 30px;
+  background-position: 0 0, 15px 15px;
+  animation: sparkle 1.5s infinite;
+  z-index: 1;
+}
+
+@keyframes sparkle {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-100%);
+  }
 }
 
 .container {
+  position: relative;
+  z-index: 2; /* Garante que a caixa fique acima dos brilhinhos */
   text-align: center;
   background: rgba(255, 255, 255, 0.1);
   padding: 20px;
@@ -36,90 +65,4 @@ header {
 .profile-picture img {
   width: 100px; /* Ajuste o tamanho conforme necessário */
   height: 100px; /* Ajuste o tamanho conforme necessário */
-  border-radius: 50%; /* Faz a imagem ficar redonda */
-  object-fit: cover; /* Mantém a proporção da imagem */
-  border: 3px solid #fff; /* Adiciona uma borda branca ao redor da imagem */
-}
-
-h1 {
-  font-size: 2.2em;
-  margin-bottom: 10px;
-}
-
-p {
-  font-size: 1.1em;
-  margin-bottom: 20px;
-}
-
-.button-container {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-}
-
-.button {
-  background: rgba(255, 255, 255, 0.2);
-  color: #fff;
-  padding: 12px 20px;
-  border-radius: 30px;
-  text-decoration: none;
-  font-size: 1em;
-  border: 2px solid #fff;
-  transition: all 0.3s ease;
-  position: relative;
-  overflow: hidden;
-}
-
-.button:hover {
-  background: rgba(255, 255, 255, 0.4);
-  transform: translateY(-5px);
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-}
-
-.button::before {
-  content: '';
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 300%;
-  height: 300%;
-  background: radial-gradient(circle, rgba(255, 255, 255, 0.5), transparent);
-  transform: translate(-50%, -50%) scale(0);
-  transition: transform 0.5s ease;
-}
-
-.button:hover::before {
-  transform: translate(-50%, -50%) scale(1);
-}
-
-footer {
-  margin-top: 20px;
-  font-size: 0.9em;
-  color: #ccc;
-}
-
-/* Media Queries */
-@media (max-width: 600px) {
-  .container {
-    padding: 15px;
-    max-width: 95%;
-  }
-
-  h1 {
-    font-size: 1.8em;
-  }
-
-  p {
-    font-size: 2em;
-    margin-bottom: 15px;
-  }
-
-  .button {
-    padding: 10px 15px;
-    font-size: 0.9em;
-  }
-
-  .button-container {
-    gap: 10px;
-  }
-}
+  border-radius: 
