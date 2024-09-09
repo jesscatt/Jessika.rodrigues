@@ -11,10 +11,11 @@ body {
   color: #e0e0e0; /* Cor de texto menos brilhante */
   display: flex;
   justify-content: center;
-  align-items: center;
-  height: 100vh;
-  overflow: hidden; /* Impede rolagem */
-  position: relative; /* Para posicionar o conteúdo */
+  align-items: flex-start; /* Alinhado ao topo para rolar */
+  min-height: 100vh; /* Garante que a página ocupe 100% da altura da tela */
+  padding: 20px 0; /* Espaçamento ao redor */
+  overflow-y: auto; /* Permite rolagem vertical */
+  position: relative;
 }
 
 .container {
@@ -25,6 +26,8 @@ body {
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.7); /* Sombra mais forte */
   max-width: 90%;
   width: 400px;
+  max-height: 90vh; /* Limita a altura para evitar que ocupe toda a tela */
+  overflow-y: auto; /* Habilita rolagem interna, se necessário */
   position: relative;
   z-index: 1; /* Garante que a caixa fique acima do fundo */
 }
