@@ -1,188 +1,56 @@
 /* assets/style.css */
-/* assets/style.css */
 
-/* Aplicando um fundo degradê no corpo */
 body {
   font-family: Arial, sans-serif;
-  background: linear-gradient(to bottom, #003366, #00ccff);
+  background-color: #f0f0f0;
   margin: 0;
   padding: 0;
-  height: 100vh; /* Preencher toda a altura da tela */
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 .container {
-  max-width: 500px;
-  margin: auto;
+  max-width: 600px;
+  margin: 0 auto;
   text-align: center;
   padding: 20px;
-  background-color: rgba(255, 255, 255, 0.1); /* Fundo transparente */
-  border-radius: 15px; /* Bordas arredondadas */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra suave */
 }
 
-/* Estilizando o cabeçalho */
 header {
   margin-bottom: 20px;
 }
 
 h1 {
   font-size: 2.5em;
-  color: #fff;
-  margin-bottom: 10px;
+  color: #333;
 }
 
 p {
-  color: #eee;
-  font-size: 1.2em;
+  color: #555;
 }
 
-/* Estilo dos botões */
 .button-container {
   display: flex;
   flex-direction: column;
-  gap: 15px; /* Espaçamento entre os botões */
+  gap: 10px;
   align-items: center;
 }
 
 .button {
   text-decoration: none;
   padding: 15px 30px;
-  background-color: rgba(255, 255, 255, 0.2);
+  background-color: #007bff;
   color: white;
   font-size: 1.2em;
-  border: 2px solid white;
-  border-radius: 25px; /* Borda arredondada */
-  width: 100%; /* Preencher toda a largura do container */
-  max-width: 400px; /* Limitar a largura dos botões */
-  transition: all 0.3s ease;
-}
-
-.button:hover {
-  background-color: rgba(255, 255, 255, 0.3); /* Efeito hover com mais destaque */
-  color: white;
-  transform: translateY(-2px); /* Efeito de levantar o botão ao passar o mouse */
-}
-
-footer {
-  margin-top: 20px;
-  color: #ccc;
-  font-size: 0.9em;
-}
-
-
-/* Aplicando um fundo degradê dinâmico no corpo */
-body {
-  font-family: Arial, sans-serif;
-  background: linear-gradient(to bottom, #003366, #00ccff);
-  margin: 0;
-  padding: 0;
-  height: 100vh; /* Preencher toda a altura da tela */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  animation: gradientBackground 8s ease infinite; /* Animação de gradiente */
-}
-
-/* Animação suave para o fundo */
-@keyframes gradientBackground {
-  0% { background: linear-gradient(to bottom, #003366, #00ccff); }
-  50% { background: linear-gradient(to bottom, #002244, #0099cc); }
-  100% { background: linear-gradient(to bottom, #003366, #00ccff); }
-}
-
-.container {
-  max-width: 500px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  width: 80%;
   text-align: center;
-  padding: 30px;
-  background-color: rgba(255, 255, 255, 0.1);
-  border-radius: 15px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); /* Sombra mais intensa */
-  opacity: 0;
-  transform: translateY(50px);
-  animation: fadeInUp 1.5s ease forwards; /* Animação de entrada suave */
 }
 
-/* Animação de fade in e deslocamento */
-@keyframes fadeInUp {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* Estilizando o cabeçalho com mais interatividade */
-header {
-  margin-bottom: 20px;
-}
-
-h1 {
-  font-size: 2.5em;
-  color: #fff;
-  margin-bottom: 10px;
-  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Sombra no texto */
-}
-
-p {
-  color: #eee;
-  font-size: 1.2em;
-}
-
-/* Estilo dos botões com efeitos mais interativos */
-.button-container {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-  align-items: center;
-}
-
-.button {
-  text-decoration: none;
-  padding: 15px 30px;
-  background-color: rgba(255, 255, 255, 0.2);
-  color: white;
-  font-size: 1.2em;
-  border: 2px solid white;
-  border-radius: 25px;
-  width: 100%;
-  max-width: 400px;
-  transition: all 0.3s ease;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Sombra suave nos botões */
-  position: relative;
-  overflow: hidden;
-}
-
-/* Efeito hover nos botões */
 .button:hover {
-  background-color: rgba(255, 255, 255, 0.4);
-  color: white;
-  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.3); /* Sombra mais forte no hover */
-  transform: translateY(-5px); /* Elevar levemente no hover */
-}
-
-/* Efeito de brilho ao passar o mouse */
-.button::before {
-  content: '';
-  position: absolute;
-  top: -50%;
-  left: -50%;
-  width: 200%;
-  height: 200%;
-  background: radial-gradient(circle, rgba(255, 255, 255, 0.4), transparent 60%);
-  transform: translate(-50%, -50%) rotate(45deg);
-  transition: all 0.3s ease;
-  opacity: 0;
-}
-
-.button:hover::before {
-  opacity: 1;
-  transform: translate(-50%, -50%) rotate(0deg); /* Efeito de brilho */
+  background-color: #0056b3;
 }
 
 footer {
   margin-top: 20px;
-  color: #ccc;
-  font-size: 0.9em;
+  color: #777;
 }
