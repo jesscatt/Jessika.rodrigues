@@ -88,5 +88,38 @@ p {
   transition: transform 0.5s ease;
 }
 
-.button:hover::
+.button:hover::before {
+  transform: translate(-50%, -50%) scale(1);
+}
 
+footer {
+  margin-top: 20px;
+  font-size: 0.9em;
+  color: #ccc;
+}
+
+/* Media Queries */
+@media (max-width: 600px) {
+  .container {
+    padding: 15px;
+    max-width: 95%;
+  }
+
+  h1 {
+    font-size: 1.8em;
+  }
+
+  p {
+    font-size: 1em;
+    margin-bottom: 15px;
+  }
+
+  .button {
+    padding: 10px 15px;
+    font-size: 0.9em;
+  }
+
+  .button-container {
+    gap: 10px;
+  }
+}
