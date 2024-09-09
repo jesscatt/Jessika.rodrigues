@@ -7,44 +7,23 @@
 
 body {
   font-family: 'Arial', sans-serif;
-  background: #6a0dad; /* Cor de fundo roxa */
+  background: repeating-linear-gradient(
+    45deg,
+    #6a0dad, /* Roxo */
+    #6a0dad 10px,
+    #000 10px,
+    #000 20px
+  );
   color: #fff;
-  overflow: hidden; /* Impede rolagem causada pelos brilhinhos */
-  position: relative; /* Para posicionar brilhinhos absolutamente */
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
-}
-
-/* Brilhinhos */
-body::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: radial-gradient(circle, rgba(255, 255, 255, 0.3) 10%, transparent 10%),
-              radial-gradient(circle, rgba(255, 255, 255, 0.3) 10%, transparent 10%);
-  background-size: 15px 15px, 30px 30px;
-  background-position: 0 0, 15px 15px;
-  animation: sparkle 1.5s infinite;
-  z-index: 1;
-}
-
-@keyframes sparkle {
-  0% {
-    transform: translateY(0);
-  }
-  100% {
-    transform: translateY(-100%);
-  }
+  overflow: hidden; /* Impede rolagem causada pela grade */
+  position: relative; /* Para posicionar o conteúdo */
 }
 
 .container {
-  position: relative;
-  z-index: 2; /* Garante que a caixa fique acima dos brilhinhos */
   text-align: center;
   background: rgba(255, 255, 255, 0.1);
   padding: 20px;
@@ -52,6 +31,8 @@ body::before {
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
   max-width: 90%;
   width: 400px;
+  position: relative;
+  z-index: 1; /* Garante que a caixa fique acima do fundo */
 }
 
 header {
@@ -77,7 +58,7 @@ h1 {
 
 p {
   font-size: 1.1em;
-  margin-bottom: 12px;
+  margin-bottom: 20px;
 }
 
 .button-container {
@@ -125,6 +106,16 @@ footer {
   margin-top: 20px;
   font-size: 0.9em;
   color: #ccc;
+}
+
+/* Link de e-mail */
+a {
+  color: #00f; /* Cor azul para links */
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
 }
 
 /* Media Queries */
