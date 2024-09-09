@@ -12,7 +12,6 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
-  margin: 0;
   color: #fff;
 }
 
@@ -26,7 +25,22 @@ body {
   width: 400px;
 }
 
-/* Estilo do cabeçalho */
+header {
+  margin-bottom: 20px;
+}
+
+.profile-picture {
+  margin-bottom: 15px;
+}
+
+.profile-picture img {
+  width: 100px; /* Ajuste o tamanho conforme necessário */
+  height: 100px; /* Ajuste o tamanho conforme necessário */
+  border-radius: 50%; /* Faz a imagem ficar redonda */
+  object-fit: cover; /* Mantém a proporção da imagem */
+  border: 3px solid #fff; /* Adiciona uma borda branca ao redor da imagem */
+}
+
 h1 {
   font-size: 2.2em;
   margin-bottom: 10px;
@@ -37,7 +51,6 @@ p {
   margin-bottom: 20px;
 }
 
-/* Estilo dos botões */
 .button-container {
   display: flex;
   flex-direction: column;
@@ -59,11 +72,10 @@ p {
 
 .button:hover {
   background: rgba(255, 255, 255, 0.4);
-  transform: translateY(-5px); /* Efeito de elevação */
+  transform: translateY(-5px);
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
-/* Adicionando efeito de brilho nos botões */
 .button::before {
   content: '';
   position: absolute;
@@ -76,39 +88,5 @@ p {
   transition: transform 0.5s ease;
 }
 
-.button:hover::before {
-  transform: translate(-50%, -50%) scale(1);
-}
+.button:hover::
 
-/* Estilo do rodapé */
-footer {
-  margin-top: 20px;
-  font-size: 0.9em;
-  color: #ccc;
-}
-
-/* Media Queries */
-@media (max-width: 600px) {
-  .container {
-    padding: 15px;
-    max-width: 95%;
-  }
-
-  h1 {
-    font-size: 1.8em;
-  }
-
-  p {
-    font-size: 1em;
-    margin-bottom: 15px;
-  }
-
-  .button {
-    padding: 10px 15px;
-    font-size: 0.9em;
-  }
-
-  .button-container {
-    gap: 10px;
-  }
-}
