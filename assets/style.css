@@ -1,3 +1,10 @@
+/* Adicionando o estilo de clique */
+.button.clicked {
+  background: rgba(255, 255, 255, 0.4); /* Fundo mais claro ao clicar */
+  transform: translateY(0); /* Remove o efeito de elevação ao clicar */
+  box-shadow: none; /* Remove a sombra ao clicar */
+}
+
 /* Estilo global */
 * {
   margin: 0;
@@ -59,7 +66,6 @@ p {
   margin-bottom: 1px;
   color: #ccc; /* Texto um pouco mais escuro para contraste */
 }
-
 
 .button-container {
   display: flex;
